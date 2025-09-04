@@ -1,4 +1,5 @@
 // Archivo simplificado - las funciones se registran en sus propios archivos
 // Solo importamos para que se ejecuten los registros
 import './functions/test.js';
-import './functions/names-simple.js';
+import './functions/names-diagnostic.js';
+// import './functions/names-simple.js'; // Comentado temporalmente
