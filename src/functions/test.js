@@ -1,13 +1,23 @@
-export default async function (context, req) {
-  context.log('test function executed - completely isolated');
+import { app } from '@azure/functions';
+
+export async function testHandler(request, context) {
+  context.log('test function executed - basic handler');
   
-  return new Response(JSON.stringify({
-    message: 'Function is working perfectly!',
-    method: req.method,
-    timestamp: new Date().toISOString(),
-    status: 'OK'
-  }), { 
-    status: 200, 
-    headers: { 'Content-Type': 'application/json' } 
-  });
+  return { 
+    status: 200,
+    jsonBody: {
+      message: 'Function is working perfectly!',
+      method: request.method,
+      timestamp: new Date().toISOString(),
+      status: 'OK'
+    }
+  };
 }
+
+// Registro directo en el mismo archivo
+app.http('test', {
+  route: 'test',
+  methods: ['GET', 'POST'],
+  authLevel: 'anonymous',
+  handler: testHandler
+});
