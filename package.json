@@ -1,0 +1,15 @@
+{
+  "name": "api-azure-functions",
+  "version": "1.0.0",
+  "description": "Azure Function simple que guarda un campo Nombre en data.json (modelo v4)",
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@azure/functions": "^4.7.0"
+  },
+  "license": "MIT"
+}
