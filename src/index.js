@@ -2,4 +2,4 @@
 // Solo importamos para que se ejecuten los registros
 import './functions/test.js';
 import './functions/names-diagnostic.js';
-// import './functions/names-simple.js'; // Comentado temporalmente
+import './functions/names-simple.js'; // Habilitado - variables de entorno configuradas
