@@ -1,4 +1,5 @@
 import { app, input, output } from '@azure/functions';
+import crypto from 'crypto';
 
 // Bindings de Cosmos DB
 const namesInput = input.cosmosDB({
