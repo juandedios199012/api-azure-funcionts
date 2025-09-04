@@ -1,10 +1,10 @@
 import { input, output } from '@azure/functions';
 import { randomUUID } from 'crypto';
 
-// Configuración de Cosmos DB desde variables de entorno (más seguro)
+// Configuración de Cosmos DB desde variables de entorno (obligatorias)
 export const COSMOS_CONNECTION = 'CosmosDBConnection';
-export const COSMOS_DATABASE = process.env.COSMOS_DATABASE || 'NamesDB';
-export const COSMOS_CONTAINER = process.env.COSMOS_CONTAINER || 'Names';
+export const COSMOS_DATABASE = process.env.COSMOS_DATABASE;
+export const COSMOS_CONTAINER = process.env.COSMOS_CONTAINER;
 
 // Input binding: lista completa de documentos (GET)
 export const namesListInput = input.cosmosDB({
